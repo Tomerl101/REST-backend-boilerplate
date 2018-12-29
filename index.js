@@ -9,6 +9,7 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.get('/', (req, res) => res.send('hello world!'));
 app.use('/sports', sport);
 
 //error handling middelware
