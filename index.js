@@ -1,5 +1,6 @@
 const configs = require('./configs');
 const express = require('express');
+const path = require('path');
 const morgan = require('morgan');
 const port = process.env.PORT || 8080;
 const sport = require('./routes/sport');
@@ -10,8 +11,10 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/', (req, res) => res.send('hello world!'));
 app.use('/sports', sport);
+app.get('*', (req, res) => {
+  res.sendredircet('');
+});
 
 //error handling middelware
 app.use(function (err, req, res, next) {
