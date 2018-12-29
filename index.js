@@ -1,3 +1,4 @@
+const configs = require('./configs');
 const express = require('express');
 const morgan = require('morgan');
 const port = process.env.PORT || 8080;
@@ -19,6 +20,6 @@ app.use(function (err, req, res, next) {
 });
 
 
-app.listen(port, () => {
+app.listen(configs.PORT, () => {
   console.log(`Server runing on port ${port}`);
 });
