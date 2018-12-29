@@ -1,0 +1,18 @@
+{
+  "name": "sports-api",
+  "version": "1.0.0",
+  "description": "CRUD API template using mLab as a DB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon index.js"
+  },
+  "author": "Tomer Lotan",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.0",
+    "morgan": "^1.9.1"
+  }
+}
