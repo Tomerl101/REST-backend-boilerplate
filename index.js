@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use('/sports', sport);
 app.get('*', (req, res) => {
-  res.sendredircet('https://documenter.getpostman.com/view/5598676/RznBMfMq#320c0b30-799b-40eb-b736-94dbea0c3612');
+  res.redircet('https://documenter.getpostman.com/view/5598676/RznBMfMq#320c0b30-799b-40eb-b736-94dbea0c3612');
 });
 
 //error handling middelware
