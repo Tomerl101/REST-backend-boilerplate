@@ -1,6 +1,5 @@
 const configs = require('./configs');
 const express = require('express');
-const path = require('path');
 const morgan = require('morgan');
 const port = process.env.PORT || 8080;
 const sport = require('./routes/sport');
