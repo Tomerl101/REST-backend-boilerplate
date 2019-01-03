@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/sports', sport);
-app.get('*', (req, res) => {
+app.all('*', (req, res) => {
   res.redirect(configs.API_URL);
 });
 
@@ -23,5 +23,5 @@ app.use(function (err, req, res, next) {
 
 
 app.listen(configs.PORT, () => {
-  console.log(`Server runing on port ${port}`);
+  console.log(`Server runing on port ${configs.PORT}`);
 });

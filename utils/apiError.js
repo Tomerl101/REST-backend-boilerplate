@@ -6,7 +6,7 @@ class ApiError extends Error {
   static get NotFoundError() {
     return {
       name: 'NOT FOUND',
-      message: 'Object not found with this id',
+      message: 'Sport not found',
       status: 404
     }
   }

@@ -3,8 +3,8 @@ const StyleSchema = require('./style');
 const Schema = mongoose.Schema;
 
 let SportSchema = new Schema({
-  id: { type: Number, min: 0, required: true },
   name: { type: String, required: true, max: 100 },
+  country: { type: String, required: true, max: 100 },
   style: StyleSchema
 });
 
