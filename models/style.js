@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let StyleSchema = new Schema({
-  participants: { type: Number, min: 0, required: true },
+  participants: { type: Number, min: 2, required: true },
   distance: { type: Number, min: 0, required: true },
   best_time: { type: String, required: false }
 }, { _id: false });

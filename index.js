@@ -1,7 +1,6 @@
-const configs = require('./configs');
+const configs = require('./utils/configs');
 const express = require('express');
 const morgan = require('morgan');
-const port = process.env.PORT || 8080;
 const sport = require('./routes/sport');
 const db = require('./db');
 
@@ -12,13 +11,14 @@ app.use(express.json());
 
 app.use('/sports', sport);
 app.get('*', (req, res) => {
-  res.redirect('https://documenter.getpostman.com/view/5598676/RznBMfMq#320c0b30-799b-40eb-b736-94dbea0c3612');
+  res.redirect(configs.API_URL);
 });
 
 //error handling middelware
 app.use(function (err, req, res, next) {
+  const { status, name, message } = err;
   res.status(err.status);
-  res.json({ error: err.error, description: err.description });
+  res.json({ status, name, message });
 });
 
 

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const configs = require('../configs');
+const configs = require('../utils/configs');
 
 mongoose.connect(configs.DB_URL, { useNewUrlParser: true, user: configs.DB_USER, pass: configs.DB_PASS });
 const db = mongoose.connection
