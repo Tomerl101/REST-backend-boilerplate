@@ -17,8 +17,8 @@ app.get('*', (req, res) => {
 
 //error handling middelware
 app.use(function (err, req, res, next) {
-  res.status(500);
-  res.send(err);
+  res.status(err.status);
+  res.json({ error: err.error, description: err.description });
 });
 
 
